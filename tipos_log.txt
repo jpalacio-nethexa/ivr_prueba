@@ -1,0 +1,15 @@
+1) llamada nueva.
+2) llamada pendiente.
+3) llamada transferencia.
+4) reproduce bienvenido.
+5) ir a operador.
+6) lee placa.
+7) confirmando placa.
+8) colgo el servicio.
+9) colgo por limite de tiempo.
+10) llamar al conductor.
+11) lee direcciones.
+12) se agoto el timeout, se manda a operadora.
+13) tiempo cancelado completado, leer opciones
+14) tiempo completado, opcion usuario
+15) tiempo completado, cancelado automatico.

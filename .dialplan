@@ -1,0 +1,19 @@
+[andaluz-Nuevo]
+
+exten => s,1,Answer()
+ same => n,Set(CALLERID(num)=${CALLERID(num)})
+ same => n,Set(CALLERID(name)=${CALLERID(name)})
+ same => n(App),AGI(agi://127.0.0.1:3000,${CALLERID(num)})
+ same => n,GotoIf($[${operadora} = 1]?cola)
+ same => n,GotoIf($[${llamar} = 1]?llamando)
+ same => n,Hangup()
+ same => n(cola),background(ivr/taxi/atencion-personalizada)
+ same => n,Goto(ext-queues,6500,1)
+ same => n,Hangup()
+ same => n(llamando),Dial(SIP/Ser-Principal/${numberTax})
+ same => n,Hangup()
+
+exten => i,1,Goto(ext-queues,6500,1)
+ same => n,Hangup()
+exten => e,1,Goto(ext-queues,6500,1)
+ same => n,Hangup()
