@@ -1,1 +1,1 @@
-segundo intento
+const credencial="__HASH__";
